@@ -1,13 +1,11 @@
-package com.bigcorp.nftapp.oldservice;
+package com.bigcorp.springapp.service;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-import com.bigcorp.springapp.service.DemonstrationService;
-
-@SpringJUnitConfig(locations = "classpath:/spring-context-old.xml")
+@SpringJUnitConfig(locations = "classpath:/spring-context.xml")
 class DemonstrationServiceTest {
 
 	@Autowired
