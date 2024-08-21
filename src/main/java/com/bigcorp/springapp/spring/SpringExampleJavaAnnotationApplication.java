@@ -20,17 +20,22 @@ public class SpringExampleJavaAnnotationApplication {
 			appContext.scan("com.bigcorp.springapp.service");
 			appContext.refresh();
 
-			//Récupération de CompanyService
-			CompanyService CompanyService = appContext.getBean(CompanyService.class);
-			CompanyService.setValue(59);
-			CompanyService.sayHello();
+			//Récupération de companyService
+			CompanyService companyService = appContext.getBean(CompanyService.class);
+			companyService.setValue(59);
+			companyService.sayHello();
 
 			//Récupération de employeeService
 			EmployeeService employeeService = appContext.getBean(EmployeeService.class);
 			employeeService.sayHello();
 
-			//Récupération de employeeService, attribut de CompanyService
-			CompanyService.getEmployeeService().sayHello();
+			//Récupération de employeeService, attribut de companyService
+			companyService.getEmployeeService().sayHello();
+
+			CompanyService companyService1 = appContext.getBean(CompanyService.class);
+			CompanyService companyService2 = appContext.getBean(CompanyService.class);
+
+			System.out.println("Les instances des companyServices sont les mêmes ? " + (companyService1 == companyService2));
 			
 		}
 
