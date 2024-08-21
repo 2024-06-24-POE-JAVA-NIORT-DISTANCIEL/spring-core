@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class DemonstrationService {
+public class CompanyService {
 
 	@Autowired
 	private EmployeeService employeeService;
@@ -21,7 +21,7 @@ public class DemonstrationService {
 	}
 
 	public void sayHello() {
-		System.out.println("hello de DemonstrationService" + this.value);
+		System.out.println("hello de CompanyService" + this.value);
 	}
 
 	public EmployeeService getEmployeeService() {

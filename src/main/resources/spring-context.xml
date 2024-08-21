@@ -6,5 +6,10 @@
 
 	<bean name="demonstrationService" class="com.bigcorp.springapp.service.DemonstrationService"></bean>
 
+	<bean name="employeeService" class="com.bigcorp.springapp.service.separated.EmployeeService"></bean>
+
+	<bean name="companyService" class="com.bigcorp.springapp.service.CompanyService">
+		<property name="employeeService" ref="employeeService" />
+	</bean>
 
 </beans>

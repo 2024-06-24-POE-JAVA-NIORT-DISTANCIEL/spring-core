@@ -1,9 +1,14 @@
 package com.bigcorp.springapp.service.separated;
 
+import com.bigcorp.springapp.service.DemonstrationService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class EmployeeService {
+
+	@Autowired
+	private DemonstrationService demonstrationService;
 	
 	private int value;
 	

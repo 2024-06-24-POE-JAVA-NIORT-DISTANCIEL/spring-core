@@ -1,5 +1,6 @@
 package com.bigcorp.springapp.spring;
 
+import com.bigcorp.springapp.service.CompanyService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.bigcorp.springapp.service.DemonstrationService;
@@ -26,6 +27,8 @@ public class SpringXmlApplication {
 				=  appContext.getBean("demonstrationService", DemonstrationService.class);
 			demonstrationService2.setValue(3);
 			demonstrationService2.sayHello();
+
+			appContext.getBean(CompanyService.class).getEmployeeService().sayHello();
 			
 		}
 	}
